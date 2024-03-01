@@ -1,0 +1,6 @@
+@SendEmailWithJWT_HostAddress = http://localhost:5243
+
+GET {{SendEmailWithJWT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
