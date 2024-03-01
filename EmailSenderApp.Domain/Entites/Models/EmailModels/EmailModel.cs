@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace EmailSenderApp.Domain.Entites.Models.EmailModels
@@ -8,7 +9,8 @@ namespace EmailSenderApp.Domain.Entites.Models.EmailModels
         public long id { get; set; }
         [EmailAddress]
         public string email { get; set; }
-        public string Subject { get; set; }
-        public string Body { get; set; }
+        public string password { get; set; }
+        public string Fullname { get; set; }
+
     }
 }

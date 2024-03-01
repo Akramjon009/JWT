@@ -1,9 +1,7 @@
-﻿using EmailSenderApp.Domain.Entites.Models.AuthModels;
-using EmailSenderApp.Domain.Entites.Models.EmailModels;
+﻿using EmailSenderApp.Domain.Entites.Models.EmailModels;
 using EmailSenderApp.Domain.Entites.Models.StudentModels;
 using EmailSenderApp.Domain.Entites.Models.TeacherModels;
 using Microsoft.EntityFrameworkCore;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace EmailSenderApp.Infrastracture
 {
@@ -15,8 +13,8 @@ namespace EmailSenderApp.Infrastracture
             Database.Migrate();
         }
       
-        DbSet<TeacherModel> teacherModels {  get; set; }
-        DbSet<StudentModel> studentModels { get; set; }
-        DbSet<EmailModel> emailModels { get; set; }
+        public DbSet<TeacherModel> teacherModels {  get; set; }
+        public DbSet<StudentModel> studentModels { get; set; }
+        public DbSet<EmailModel> emailModels { get; set; }
     }
 }
