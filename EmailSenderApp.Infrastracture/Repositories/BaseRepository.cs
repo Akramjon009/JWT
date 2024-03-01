@@ -2,17 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace EmailSenderApp.Infrastracture
+namespace EmailSenderApp.Infrastracture.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
         private readonly ApplicationDbContext _context;
         private readonly DbSet<T> _dbSet;
 
-        public BaseRepository(ApplicationDbContext context, DbSet<T> dbSet)
+        public BaseRepository(ApplicationDbContext context)
         {
             _context = context;
-            _dbSet = dbSet;
+            _dbSet = context.Set<T>();
         }
 
         public async Task<T> Create(T entity)

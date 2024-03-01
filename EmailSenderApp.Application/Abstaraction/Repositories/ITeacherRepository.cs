@@ -1,6 +1,9 @@
-﻿namespace EmailSenderApp.Application.Abstaraction.Repositories
+﻿using EmailSenderApp.Application.Abstaraction.IBaseRepositories;
+using EmailSenderApp.Domain.Entites.Models.TeacherModels;
+
+namespace EmailSenderApp.Application.Abstaraction.Repositories
 {
-    public class ITeacherRepository
+    public interface ITeacherRepository: IBaseRepository<TeacherModel>
     {
     }
 }

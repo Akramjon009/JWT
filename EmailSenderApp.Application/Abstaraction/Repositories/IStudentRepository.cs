@@ -1,6 +1,9 @@
-﻿namespace EmailSenderApp.Application.Abstaraction.Repositories
+﻿using EmailSenderApp.Application.Abstaraction.IBaseRepositories;
+using EmailSenderApp.Domain.Entites.Models.StudentModels;
+
+namespace EmailSenderApp.Application.Abstaraction.Repositories
 {
-    public class IStudentRepository
+    public interface IStudentRepository : IBaseRepository<StudentModel>
     {
     }
 }
